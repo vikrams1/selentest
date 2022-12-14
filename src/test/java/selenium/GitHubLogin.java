@@ -80,6 +80,8 @@ public class GitHubLogin {
 		
 		assertTrue(actual.equals(expected), "Test case Failed");
 		
+		driver.quit();
+		
 
 	}
 
@@ -97,7 +99,7 @@ public class GitHubLogin {
 	@AfterSuite
 	public void quitBrowser() {
 		// Quit the browser
-		driver.quit();
+		//driver.quit();
 	}
 
 }
