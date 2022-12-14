@@ -60,6 +60,8 @@ public class GitHubLogin {
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--headless");
         chromeOptions.addArguments("--no-sandbox");
+        chromeOptions.addArguments("--window-size=1920,1080")
+        chromeOptions.addArguments("--start-maximized")
         
         WebDriver driver = new ChromeDriver(chromeOptions);
   
