@@ -26,7 +26,7 @@ public class GitHubLogin {
 	@BeforeSuite
 	public void openBrowser() {
 
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\vikram\\Downloads\\chromedriver_win33\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 		driver = new ChromeDriver();
 		
 		//ExtentSparkReporter htmlReporter = new ExtentSparkReporter("extentReport.html");

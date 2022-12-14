@@ -9,10 +9,35 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">GitHub Application Testing</th></tr>
-<tr><td><a href="#t0">Github Login</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">4,192</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Github Login</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">0</td><td class="num">1,261</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">GitHub Application Testing</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Github Login &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">selenium.GitHubLogin</td><td><a href="#m0">logIn</a></td><td rowspan="1">1670998167251</td><td rowspan="1">8</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">GitHub Application Testing</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Github Login &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">selenium.GitHubLogin</td><td><a href="#m0">clickLoginButton</a></td><td rowspan="1">1670998701479</td><td rowspan="1">553</td></tr><tr><th colspan="4">Github Login &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="2">selenium.GitHubLogin</td><td><a href="#m1">logOut</a></td><td rowspan="1">1670998702067</td><td rowspan="1">-1670998702067</td></tr><tr class="skippedeven"><td><a href="#m2">quitBrowser</a></td><td rowspan="1">1670998702137</td><td rowspan="1">-1670998702137</td></tr><tr><th colspan="4">Github Login &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">selenium.GitHubLogin</td><td><a href="#m3">logIn</a></td><td rowspan="1">1670998702062</td><td rowspan="1">0</td></tr></tbody>
 </table>
-<h2>Github Login</h2><h3 id="m0">selenium.GitHubLogin#logIn</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Github Login</h2><h3 id="m0">selenium.GitHubLogin#clickLoginButton</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.xpath: //a[@href=&apos;/login&apos;]
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.5.3&apos;, revision: &apos;4b786a1e430&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.15&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at selenium.GitHubLogin.clickLoginButton(GitHubLogin.java:45)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">selenium.GitHubLogin#logOut</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">selenium.GitHubLogin#quitBrowser</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">selenium.GitHubLogin#logIn</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.xpath: //a[@href=&apos;/login&apos;]
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.5.3&apos;, revision: &apos;4b786a1e430&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.15&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at selenium.GitHubLogin.clickLoginButton(GitHubLogin.java:45)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
