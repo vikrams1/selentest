@@ -23,6 +23,7 @@ public class GitHubLogin {
 	// Quit - @AS
 
 	public WebDriver driver;
+	
 
 	@BeforeSuite
 	public void openBrowser() {
@@ -30,19 +31,19 @@ public class GitHubLogin {
 		//System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 		//driver = new ChromeDriver();
 		
-		System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-        ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("--headless");
-        chromeOptions.addArguments("--no-sandbox");
-        
-        WebDriver driver = new ChromeDriver(chromeOptions);
-		
 		//ExtentSparkReporter htmlReporter = new ExtentSparkReporter("extentReport.html");
 	}
 
 	@BeforeTest
 	public void openAut() {
 		// Open URL
+		
+		System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+	    ChromeOptions chromeOptions = new ChromeOptions();
+	    chromeOptions.addArguments("--headless");
+	    chromeOptions.addArguments("--no-sandbox");
+	    
+	    WebDriver driver = new ChromeDriver(chromeOptions);
 		driver.get("https://github.com/");
 
 	}
