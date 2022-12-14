@@ -23,10 +23,7 @@ public class GitHubLogin {
 	// Logout - @AC
 	// Quit - @AS
 
-	//public WebDriver driver;
-	
-    ChromeOptions chromeOptions = new ChromeOptions();
-    WebDriver driver = new ChromeDriver(chromeOptions);
+	public WebDriver driver;
 	
 
 	@BeforeSuite
@@ -36,11 +33,11 @@ public class GitHubLogin {
 		//driver = new ChromeDriver();
 		
 		System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-      //  ChromeOptions chromeOptions = new ChromeOptions();
+        //ChromeOptions chromeOptions = new ChromeOptions();
         //chromeOptions.addArguments("--headless");
         //chromeOptions.addArguments("--no-sandbox");
         
-         driver = new ChromeDriver(chromeOptions);
+         driver = new ChromeDriver();
 		
 		//ExtentSparkReporter htmlReporter = new ExtentSparkReporter("extentReport.html");
 	}
