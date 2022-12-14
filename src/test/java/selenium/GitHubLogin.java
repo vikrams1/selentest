@@ -1,0 +1,87 @@
+package selenium;
+
+import static org.testng.Assert.assertTrue;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+public class GitHubLogin {
+
+	// Open Browser - @BS
+	// Open the URL - @BT
+	// Click on Singin - @BC
+	// Login - @Test
+	// Logout - @AC
+	// Quit - @AS
+
+	public WebDriver driver;
+
+	@BeforeSuite
+	public void openBrowser() {
+
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\vikram\\Downloads\\chromedriver_win33\\chromedriver.exe");
+		driver = new ChromeDriver();
+		
+		//ExtentSparkReporter htmlReporter = new ExtentSparkReporter("extentReport.html");
+	}
+
+	@BeforeTest
+	public void openAut() {
+		// Open URL
+		driver.get("https://github.com/");
+
+	}
+
+	@BeforeClass
+	public void clickLoginButton() {
+		// Click on Login Button to navigate to the login page
+		driver.findElement(By.xpath("//a[@href='/login']")).click();
+	}
+
+	@Test
+	public void logIn() {
+		
+		String actual = driver.getTitle();
+		String expected = "GitHub: Let’s build from here · GitHub";
+
+		// Enter UserName
+		//driver.findElement(By.xpath("//input[@id='login_field' and @name = 'login']"))
+		//		.sendKeys("abhiseleniumdemo@gmail.com");
+
+		// Enter password
+		//driver.findElement(By.xpath("//input[@id='password' and @name = 'password']")).sendKeys("!Teach123");
+
+		// Click on Signin
+		//driver.findElement(By.xpath("//input[@data-signin-label='Sign in']")).click();
+		
+		
+		assertTrue(actual.equals(expected), "Test case Failed");
+		
+
+	}
+
+	@AfterClass
+	public void logOut() throws Exception {
+		// Click on Logout button menu to see the logout button
+		//driver.findElement(By.xpath("//summary[@aria-label='View profile and more']")).click();
+
+		Thread.sleep(3000);
+		
+		// Click on logOut
+		//driver.findElement(By.xpath("//*[contains(text(), 'Sign out')]")).click();
+	}
+
+	@AfterSuite
+	public void quitBrowser() {
+		// Quit the browser
+		driver.quit();
+	}
+
+}
