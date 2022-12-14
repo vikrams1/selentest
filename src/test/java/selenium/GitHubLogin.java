@@ -2,6 +2,8 @@ package selenium;
 
 import static org.testng.Assert.assertTrue;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -60,6 +62,7 @@ public class GitHubLogin {
         
         WebDriver driver = new ChromeDriver(chromeOptions);
         
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
     	driver.get("https://github.com/");
     	
 		driver.findElement(By.xpath("//a[@href='/login']")).click();
