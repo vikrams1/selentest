@@ -32,12 +32,6 @@ public class GitHubLogin {
 		//System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 		//driver = new ChromeDriver();
 		
-		System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-        ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("--headless");
-        chromeOptions.addArguments("--no-sandbox");
-        
-        WebDriver driver = new ChromeDriver(chromeOptions);
 		
 		//ExtentSparkReporter htmlReporter = new ExtentSparkReporter("extentReport.html");
 	}
@@ -45,18 +39,30 @@ public class GitHubLogin {
 	@BeforeTest
 	public void openAut() {
 		// Open URL
-		driver.get("https://github.com/");
+		//driver.get("https://github.com/");
 
 	}
 
 	@BeforeClass
 	public void clickLoginButton() {
 		// Click on Login Button to navigate to the login page
-		driver.findElement(By.xpath("//a[@href='/login']")).click();
+		//driver.findElement(By.xpath("//a[@href='/login']")).click();
 	}
 
 	@Test
 	public void logIn() {
+		
+
+		System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--headless");
+        chromeOptions.addArguments("--no-sandbox");
+        
+        WebDriver driver = new ChromeDriver(chromeOptions);
+        
+    	driver.get("https://github.com/");
+    	
+		driver.findElement(By.xpath("//a[@href='/login']")).click();
 		
 		String actual = driver.getTitle();
 		String expected = "GitHub: Let’s build from here · GitHub";
