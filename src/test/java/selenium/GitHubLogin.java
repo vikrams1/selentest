@@ -65,7 +65,7 @@ public class GitHubLogin {
     	driver.get("https://github.com/");
     	
         
-   		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+   		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
     	
 		driver.findElement(By.xpath("//a[@href='/login']")).click();
 		
