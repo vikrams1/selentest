@@ -51,6 +51,7 @@ public class GitHubLogin {
 		//driver.findElement(By.xpath("//a[@href='/login']")).click();
 	}
 
+	@SuppressWarnings("deprecation")
 	@Test
 	public void logIn() {
 		
@@ -65,9 +66,9 @@ public class GitHubLogin {
     	driver.get("https://github.com/");
     	
         
-   		//driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+   		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
     	
-		//driver.findElement(By.xpath("//a[@href='/login']")).click();
+		driver.findElement(By.xpath("//a[@href='/login']")).click();
 		
 		String actual = driver.getTitle();
 		String expected = "GitHub: Let’s build from here · GitHub";
